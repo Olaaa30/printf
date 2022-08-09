@@ -23,6 +23,10 @@ int _printf(const char *format, ...)
 					printedNums += print_char(args);
 					i += 2;
 					break;
+				case 's':
+					printedNums += print_str(args);
+					i += 2;
+					break;
 				case '%':
 					_putchar('%');
 					printedNums++;
