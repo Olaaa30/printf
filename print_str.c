@@ -13,7 +13,7 @@ int _puts(char *str)
 		_putchar(str[i]);
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 /**
@@ -23,5 +23,5 @@ int _puts(char *str)
  */
 int print_str(va_list args)
 {
-	return(_puts(va_arg(args, char *)));
+	return (_puts(va_arg(args, char *)));
 }
