@@ -22,11 +22,13 @@ int _printf(const char *format, ...)
 				case 'c':
 					printedNums += print_char(args);
 					i += 2;
-					break;
-				case 's':
-					printedNums += print_str(args);
-					i += 2;
-					break;
+					break
+/**
+*				case 's':
+*					printedNums += print_str(args);
+*					i += 2;
+*					break;
+*/
 				case '%':
 					_putchar('%');
 					printedNums++;
