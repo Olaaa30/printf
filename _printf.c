@@ -19,12 +19,10 @@ int _printf(const char *format, ...)
 		{
 			switch (format[i + 1])
 			{
-				/**case 'c':
-				*	printedNums += print_char(args);
-				*	i += 2;
-				*
-				* 	break
-				*/
+				case 'c':
+					printedNums += print_char(args);
+					i += 2;
+				 	break
 				case 's':
 					printedNums += print_str(args);
 					i += 2;
