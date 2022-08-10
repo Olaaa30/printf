@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 				case 'c':
 					printedNums += print_char(args);
 					i += 2;
-					break;
+				 	break;
 				case 's':
 					printedNums += print_str(args);
 					i += 2;
@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 					_putchar(format[i]);
 					_putchar(format[i + 1]);
 					i += 2;
+					break;
 			}
 		}
 		if (format[i])
