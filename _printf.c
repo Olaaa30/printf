@@ -58,10 +58,42 @@ int print_string(va_list types, char buffer[],
 	{
 		if (flags & F_MINUS)
 		{
+<<<<<<< HEAD
 			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
 				write(1, " ", 1);
 			return (width);
+=======
+			switch (format[i + 1])
+			{
+				case 'c':
+					printedNums += print_char(args);
+					i += 2;
+				 	break;
+				case 's':
+					printedNums += print_str(args);
+					i += 2;
+					break;
+				case 'i':
+					printedNums += print_int(args);
+					i +=2;
+					break;
+				case 'd':
+					printedNums += print_dec(args);
+					i += 2;
+					break;
+				case '%':
+					_putchar('%');
+					printedNums++;
+					i += 2;
+					break;
+				default:
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					i += 2;
+					break;
+			}
+>>>>>>> f9d1b559523679c8bf672f8a65c85b345e56dfae
 		}
 		else
 		{
