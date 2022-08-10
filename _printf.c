@@ -27,6 +27,14 @@ int _printf(const char *format, ...)
 					printedNums += print_str(args);
 					i += 2;
 					break;
+				case 'i':
+					printedNums += print_int(args);
+					i +=2;
+					break;
+				case 'd':
+					printedNums += print_dec(args);
+					i += 2;
+					break;
 				case '%':
 					_putchar('%');
 					printedNums++;
