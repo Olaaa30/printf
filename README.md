@@ -1,1 +1,1 @@
-This repository contains a smallscale of the printf function
+This repository contains a smallscale implementation of the printf function
